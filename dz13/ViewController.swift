@@ -16,5 +16,21 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func selectedControl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            UIView.animate(withDuration: 1.0) {
+                self.view.backgroundColor = .systemRed
+            }
+            
+        } else if sender.selectedSegmentIndex == 1 {
+            UIView.animate(withDuration: 1.0) {
+                self.view.backgroundColor = .systemGreen
+            }
+        } else {
+            UIView.animate(withDuration: 1.0) {
+                self.view.backgroundColor = .systemYellow
+            }
+        }
+    }
 }
 
